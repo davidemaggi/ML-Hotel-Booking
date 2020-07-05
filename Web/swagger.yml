@@ -1,0 +1,45 @@
+swagger: "2.0"
+info:
+  description: This is the swagger file that goes with our server code
+  version: "1.0.0"
+  title: Swagger REST Article
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+
+basePath: "/api"
+
+# Paths supported by the server application
+paths:
+  /predictCancellazioni:
+    post:
+      operationId: "ml_cancellazioni.predict"
+      tags:
+        - "Cancellazioni"
+      summary: "Previsione Cancellazione"
+      description: "Data una prenotazione, restituisce la previsione sulla cancellazione ed il grado di certezza"
+      parameters:
+        - name: prenotazione
+          in: body
+          description: La prenotazione
+          required: True
+          schema:
+            type: object
+            properties:
+              Campo1:
+                type: string
+                description: Primo Campo
+              Campo2:
+                type: string
+                description: Secondo Campo
+      responses:
+        200:
+          description: "La previsione"
+          schema:
+            type: "object"
+            properties:
+              previsione:
+                type: "boolean"
+              certezza:
+                type: "number"
