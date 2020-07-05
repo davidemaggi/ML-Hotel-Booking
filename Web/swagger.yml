@@ -27,12 +27,36 @@ paths:
           schema:
             type: object
             properties:
-              Campo1:
+              PrenotazioneHotel:
                 type: string
-                description: Primo Campo
-              Campo2:
+                description: L'Hotel prenotato
+              DataPrenotazioneArrivo:
                 type: string
-                description: Secondo Campo
+                description: La data di Arrivo prevista
+              DataPrenotazionePartenza:
+                type: string
+                description: La data di Partenza prevista
+              PrenotazioneAdulti:
+                type: number
+                description: Quanti Adulti
+              PrenotazioneBambini:
+                type: number
+                description: Quanti bambini
+              PrenotazioneInfant:
+                type: number
+                description: Quanti neonati
+              PrenotazioneCamera:
+                type: string
+                description: Tipologia di camera prenotata
+              PrenotazioneSpeciali:
+                type: number
+                description: Quante richieste speciali
+              PrenotazioneTrattamento:
+                type: string
+                description: Trattamento
+              PrenotazionePostiAuto:
+                type: number
+                description: Quanti Posti Auto
       responses:
         200:
           description: "La previsione"

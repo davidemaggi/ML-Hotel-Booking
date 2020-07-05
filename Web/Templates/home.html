@@ -7,7 +7,12 @@
     <script src="../static/js/jquery-3.5.1.min.js"></script>
     <script src="../static/js/bootstrap.min.js"></script>
     <script src="../static/js/cancellazioni.js"></script>
+    
     <link rel="stylesheet" href="../static/css/bootstrap.min.css" />
+
+    <script type="text/javascript" src="../static/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="../static/css/bootstrap-datepicker.min.css"/> 
+
   </head>
   <body>
     <div class="container">
@@ -18,26 +23,92 @@
         <div class="col-8">
         <h1>Cancellazione Prenotazione</h1>
         <form id="form-prenotazione">
+            <div class="form-group">
+                <label for="PrenotazioneHotel">Quale Hotel</label>
+                <select class="form-control" id="PrenotazioneHotel">
+                  <option>City Hotel</option>
+                  <option>Resort Hotel</option>
+                </select>
+              </div>
           <div class="form-group">
-            <label for="campo1">Campo 1</label>
-            <input
-              type="text"
-              class="form-control"
-              id="campo1"
-              aria-describedby="emailHelp"
-              placeholder="Campo1"
-            />
+            <label for="datepicker">Soggiorno</label>
+          <div class="input-daterange input-group" id="datepicker">
+            <input id="DataPrenotazioneArrivo" type="text" class="input-sm form-control" name="start" />
+            <span class="input-group-addon">al</span>
+            <input id="DataPrenotazionePartenza" type="text" class="input-sm form-control" name="end" />
+        </div>
+        </div>
+        <div class="form-group">
+            <label for="PrenotazioneAdulti">Adulti (18+)</label>
+            <select class="form-control" id="PrenotazioneAdulti">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <label for="PrenotazioneBambini">Bambini (3-17)</label>
+            <select class="form-control" id="PrenotazioneBambini">
+                <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <label for="PrenotazioneInfant">Infant (0-2)</label>
+            <select class="form-control" id="PrenotazioneInfant">
+                <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
           </div>
           <div class="form-group">
-            <label for="campo2">Campo 2</label>
-            <input
-              type="text"
-              class="form-control"
-              id="campo2"
-              aria-describedby="emailHelp"
-              placeholder="Campo2"
-            />
+            <label for="PrenotazionePostiAuto">Posti Auto</label>
+            <select class="form-control" id="PrenotazionePostiAuto">
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+
+            </select>
           </div>
+          <div class="form-group">
+            <label for="PrenotazioneSpeciali">Posti Auto</label>
+            <select class="form-control" id="PrenotazioneSpeciali" multiple >
+              <option>aaaa</option>
+              <option>bbbb</option>
+              <option>cccc</option>
+              <option>dddd</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="PrenotazioneTrattamento">Trattamento</label>
+            <select class="form-control" id="PrenotazioneTrattamento">
+              <option>BB</option>
+              <option>HB</option>
+              <option>SC</option>
+              <option>FB</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="PrenotazioneCamera">Tipo Camera</label>
+            <select class="form-control" id="PrenotazioneCamera">
+              <option>C</option>
+              <option>A</option>
+              <option>D</option>
+              <option>E</option>
+              <option>G</option>
+              <option>F</option>
+              <option>H</option>
+              <option>L</option>
+              <option>P</option>
+              <option>B</option>
+            </select>
+          </div>
+          
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>

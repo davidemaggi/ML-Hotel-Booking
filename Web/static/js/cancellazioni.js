@@ -1,5 +1,7 @@
 $(function () {
-
+    $('#datepicker').datepicker({
+        language: "it"
+    });
     // init the validator
     // validator files are included in the download package
     // otherwise download from http://1000hz.github.io/bootstrap-validator
@@ -10,13 +12,32 @@ $(function () {
     // when the form is submitted
     $('#form-prenotazione').on('submit', function (e) {
 
-        var campo1 = $("#campo1").val();
-        var campo2 = $("#campo2").val();
+        var hotel = $("#PrenotazioneHotel").val();
+        var dataArrivo = $("#DataPrenotazioneArrivo").val();
+        var dataPartenza = $("#DataPrenotazionePartenza").val();
+        var adulti = parseInt($("#PrenotazioneAdulti").val());
+        var bambini = parseInt($("#PrenotazioneBambini").val());
+        var infant = parseInt($("#PrenotazioneInfant").val());
+        var camera = $("#PrenotazioneCamera").val();
+        var speciali = $("#PrenotazioneSpeciali").val();
+        var trattamento = $("#PrenotazioneTrattamento").val();
+        var postiAuto = parseInt($("#PrenotazionePostiAuto").val());
        
 
-        var payload={"Campo1":campo1,"Campo2":campo2}
+        var payload={
+            "PrenotazioneHotel":hotel,
+            "DataPrenotazioneArrivo":dataArrivo,
+            "DataPrenotazionePartenza":dataPartenza,
+            "PrenotazioneAdulti":adulti,
+            "PrenotazioneBambini":bambini,
+            "PrenotazioneInfant":infant,
+            "PrenotazioneCamera":camera,
+            "PrenotazioneSpeciali":speciali.length,
+            "PrenotazioneTrattamento":trattamento,
+            "PrenotazionePostiAuto":postiAuto,
+            }
 
-
+            
 
         // if the validator does not prevent form submit
         if (!e.isDefaultPrevented()) {
@@ -31,16 +52,14 @@ $(function () {
                 data: JSON.stringify(payload),
                 success: function (data)
                 {
-                    // data = JSON object that contact.php returns
-
-                    // we recieve the type of the message: success x danger and apply it to the 
-                    var messageAlert = 'alert-' + data.type;
-                    var messageText = data.message;
+                    
 
                     if(data.previsione){
+                        $('#messaggio').removeClass("alert-success");
                         $('#messaggio').addClass("alert-danger");
                     }else{
                         $('#messaggio').addClass("alert-success");
+                        $('#messaggio').removeClass("alert-danger");
                     }
                     
 
