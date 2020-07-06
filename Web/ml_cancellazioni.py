@@ -3,7 +3,7 @@ import joblib
 import pandas as pd
 from pathlib import Path
 import numpy as np
-
+import random
 
 
 # Create a handler for our read (GET) people
@@ -16,12 +16,12 @@ def predict(prenotazione):
 
     :return:        sorted list of people
     """
-    modello = joblib.load("../Trained-Models/cancellazioni.pkl")
+    modello = joblib.load("../Trained-Models/cancellazioni_final.pkl")
 
 
 
-    dataArrivo = datetime.strptime(prenotazione["DataPrenotazioneArrivo"], '%m/%d/%Y')
-    dataPartenza = datetime.strptime(prenotazione["DataPrenotazionePartenza"], '%m/%d/%Y')
+    dataArrivo = datetime.strptime(prenotazione["DataPrenotazioneArrivo"], '%d/%m/%Y')
+    dataPartenza = datetime.strptime(prenotazione["DataPrenotazionePartenza"], '%d/%m/%Y')
     dataOggi = datetime.today()
 
     delta = dataArrivo - dataOggi
@@ -49,7 +49,7 @@ def predict(prenotazione):
         'required_car_parking_spaces': prenotazione["PrenotazionePostiAuto"], # Da PrenotazionePostiAuto
         'total_of_special_requests': prenotazione["PrenotazioneSpeciali"], # Da Somma PrenotazioniSpeciali
        
-        'adr': 100, # Da PrenotazioneCamera e PrenotazioneHotel
+        'adr': prenotazione["PrenotazionePrezzo"], # Da PrenotazioneCamera e PrenotazioneHotel
 
         'hotel': prenotazione["PrenotazioneHotel"], # PrenotazioneHotel
         'arrival_date_month': mesi[dataArrivo.month-1], # Da DataPrenotazioneArrivo
@@ -57,8 +57,7 @@ def predict(prenotazione):
         'market_segment': "Online TA",
         'distribution_channel': "TA/TO",
         'reserved_room_type': prenotazione["PrenotazioneCamera"], # Da PrenotazioneCamera
-        'deposit_type': "No Deposit",
-        'customer_type': "Transient"
+        'customer_type': prenotazione["PrenotazioneTipoCliente"]
     }
 
     prenotazionedf = pd.DataFrame([data], columns=data.keys())

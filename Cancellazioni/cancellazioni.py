@@ -39,7 +39,7 @@ def main():
     
     # Caratteristiche categoriche
     car_categorie = ["hotel","arrival_date_month","meal","market_segment",
-                    "distribution_channel","reserved_room_type","deposit_type","customer_type"]
+                    "distribution_channel","reserved_room_type","customer_type"]
     
     # Separiamo le caratteristiche e gli obiettivi
     caratteristiche = car_numeriche + car_categorie
@@ -76,7 +76,7 @@ def main():
     
     modello_migliore.fit(set_caratteristiche, set_obiettivo)
     # Salviamo il modello sul disco
-    joblib.dump(modello_migliore, '../Trained-Models/cancellazioni.pkl')
+    joblib.dump(modello_migliore, '../Trained-Models/cancellazioni_final.pkl')
 
 
 

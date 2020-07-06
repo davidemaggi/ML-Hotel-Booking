@@ -48,7 +48,7 @@
             
           </div>
           <div class="form-row">
-            <div class="col-3">
+            <div class="col-4">
               <div class="form-group">
                 <label for="PrenotazioneAdulti">Adulti (18+)</label>
                 <select class="form-control" id="PrenotazioneAdulti">
@@ -60,7 +60,7 @@
                 </select>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-4">
               <div class="form-group">
                 <label for="PrenotazioneBambini">Bambini (3-17)</label>
             <select class="form-control" id="PrenotazioneBambini">
@@ -73,7 +73,7 @@
             </select>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-4">
               <div class="form-group">
                 <label for="PrenotazioneInfant">Infant (0-2)</label>
             <select class="form-control" id="PrenotazioneInfant">
@@ -86,17 +86,7 @@
             </select>
               </div>
             </div>
-              <div class="col-3">
-                <div class="form-group">
-                  <label for="PrenotazionePostiAuto">Posti Auto</label>
-            <select class="form-control" id="PrenotazionePostiAuto">
-              <option  value="0">0</option>
-              <option  value="1">1</option>
-              <option  value="2">2</option>
-
-            </select>
-                </div>
-            </div>
+              
           </div>
         
             
@@ -104,11 +94,13 @@
             <div class="col-4"> <div class="form-group"> 
               <label for="PrenotazioneTrattamento">Trattamento</label>
               <select class="form-control" id="PrenotazioneTrattamento">
-                
-                <option value="FB">Pensione Completa</option>
-                <option value="HB">Mezza Pensione</option>
-                <option  value="BB">B&B</option>
                 <option value="SC">Vitto escluso</option>
+                <option  value="BB">B&B</option>
+                <option value="HB">Mezza Pensione</option>
+                <option value="FB">Pensione Completa</option>
+                
+                
+                
                 
               </select>
             </div></div>
@@ -116,7 +108,7 @@
               <label for="PrenotazioneCamera">Tipo Camera</label>
               <select class="form-control" id="PrenotazioneCamera">
                 <option value="A">Camera 1 (La piu popolare!)</option>
-                <option value="P">Camera 2</option>
+                <option value="B">Camera 2</option>
                 <option value="C">Camera 3</option>
                 <option value="D">Camera 4</option>
                 <option value="E">Camera 5</option>
@@ -130,19 +122,66 @@
             </div></div>
             <div class="col-4">
               <div class="form-group">
-                <label for="PrenotazioneSpeciali">Richieste Speciali</label>
-                <select class="form-control" id="PrenotazioneSpeciali" multiple >
-                  <option>Accesso SPA</option>
-                  <option>Tour Organizzato</option>
-                  <option>Internet Super-Veloce</option>
-                  <option>Navetta Aeroporto</option>
-                </select>
+                <label for="PrenotazionePostiAuto">Posti Auto</label>
+          <select class="form-control" id="PrenotazionePostiAuto">
+            <option  value="0">0</option>
+            <option  value="1">1</option>
+            <option  value="2">2</option>
+
+          </select>
               </div>
-            </div>
+          </div>
           </div>
         
+         
+        <div class="form-row">
+          <div class="col-3"></div>
+        <div class="col-6">
+          <div class="form-group">
+            <label for="PrenotazioneTipoCliente">Tipo Cliente</label>
+            <select class="form-control" id="PrenotazioneTipoCliente">
+              <option value="Transient">Privato</option>
+              <option value="Contract">Business (Contratto)</option>
+              <option value="Group">Gruppo vacanze</option>
+              
+            </select>
+          </div>
+        </div>
+        <div class="col-3"></div>
+      </div>
+
+      <div class="form-row">
+        <div class="col-3"></div>
+      <div class="col-6">
+        <div class="form-group">
+          <label for="PrenotazioneSpeciali">Richieste Speciali</label>
+          <select class="form-control" id="PrenotazioneSpeciali" multiple >
+            <option>Accesso SPA</option>
+            <option>Tour Organizzato</option>
+            <option>Internet Super-Veloce</option>
+            <option>Navetta Aeroporto</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-3"></div>
+    </div>
+
+
           <div class="form-row">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="col-3">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">€</span>
+                </div>
+                <input type="text" id="PrenotazionePrezzo" class="form-control" value="90" readonly>
+                <div class="input-group-append">
+                  <span class="input-group-text">.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6"></div>
+            <div class="col-3"><button type="submit" class="btn btn-primary">Submit</button></div>
+            
         </div>
           
           

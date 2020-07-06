@@ -57,6 +57,12 @@ paths:
               PrenotazionePostiAuto:
                 type: number
                 description: Quanti Posti Auto
+              PrenotazionePrezzo:
+                  type: number
+                  description: Quanto costa la camera
+              PrenotazioneTipoCliente:
+                    type: string
+                    description: Che tipo di cliente è
       responses:
         200:
           description: "La previsione"
