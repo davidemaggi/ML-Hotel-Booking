@@ -6,16 +6,11 @@ import numpy as np
 import random
 
 
-# Create a handler for our read (GET) people
+
 
 
 def predict(prenotazione):
-    """
-    This function responds to a request for /api/people
-    with the complete lists of people
-
-    :return:        sorted list of people
-    """
+    
     modello = joblib.load("../Trained-Models/cancellazioni_final.pkl")
 
 
@@ -79,6 +74,6 @@ def predict(prenotazione):
 
     
 
-    # Create the list of people from our data
+ 
     return ret
 
