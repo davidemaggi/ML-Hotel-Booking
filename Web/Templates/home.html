@@ -21,95 +21,131 @@
            
         </div>
         <div class="col-8">
-        <h1>Cancellazione Prenotazione</h1>
-        <form id="form-prenotazione">
-            <div class="form-group">
+          <form id="form-prenotazione">
+          <div class="form-row">
+            <div class="col-12"> <h1>Prenota la tua vacanza!</h1></div>
+          </div>
+          <div class="form-row">
+            <div class="col-4"> 
+              <div class="form-group">
                 <label for="PrenotazioneHotel">Quale Hotel</label>
                 <select class="form-control" id="PrenotazioneHotel">
                   <option>City Hotel</option>
                   <option>Resort Hotel</option>
                 </select>
               </div>
-          <div class="form-group">
-            <label for="datepicker">Soggiorno</label>
-          <div class="input-daterange input-group" id="datepicker">
-            <input id="DataPrenotazioneArrivo" type="text" class="input-sm form-control" name="start" />
-            <span class="input-group-addon">al</span>
-            <input id="DataPrenotazionePartenza" type="text" class="input-sm form-control" name="end" />
-        </div>
-        </div>
-        <div class="form-group">
-            <label for="PrenotazioneAdulti">Adulti (18+)</label>
-            <select class="form-control" id="PrenotazioneAdulti">
+            </div>
+            <div class="col-8">
+              <div class="form-group">
+                <label for="datepicker">Soggiorno</label>
+              <div class="input-daterange input-group" id="datepicker">
+                <input id="DataPrenotazioneArrivo" type="text" class="input-sm form-control" name="start" />
+                <span class="input-group-addon">al</span>
+                <input id="DataPrenotazionePartenza" type="text" class="input-sm form-control" name="end" />
+            </div>
+            </div>
+            </div>
+            
+          </div>
+          <div class="form-row">
+            <div class="col-3">
+              <div class="form-group">
+                <label for="PrenotazioneAdulti">Adulti (18+)</label>
+                <select class="form-control" id="PrenotazioneAdulti">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="form-group">
+                <label for="PrenotazioneBambini">Bambini (3-17)</label>
+            <select class="form-control" id="PrenotazioneBambini">
+                <option  value="0">0</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
               <option value="5">5</option>
             </select>
-            <label for="PrenotazioneBambini">Bambini (3-17)</label>
-            <select class="form-control" id="PrenotazioneBambini">
-                <option>0</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-            <label for="PrenotazioneInfant">Infant (0-2)</label>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="form-group">
+                <label for="PrenotazioneInfant">Infant (0-2)</label>
             <select class="form-control" id="PrenotazioneInfant">
-                <option>0</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
+                <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
             </select>
-          </div>
-          <div class="form-group">
-            <label for="PrenotazionePostiAuto">Posti Auto</label>
+              </div>
+            </div>
+              <div class="col-3">
+                <div class="form-group">
+                  <label for="PrenotazionePostiAuto">Posti Auto</label>
             <select class="form-control" id="PrenotazionePostiAuto">
-              <option>0</option>
-              <option>1</option>
-              <option>2</option>
+              <option  value="0">0</option>
+              <option  value="1">1</option>
+              <option  value="2">2</option>
 
             </select>
+                </div>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="PrenotazioneSpeciali">Posti Auto</label>
-            <select class="form-control" id="PrenotazioneSpeciali" multiple >
-              <option>aaaa</option>
-              <option>bbbb</option>
-              <option>cccc</option>
-              <option>dddd</option>
-            </select>
+        
+            
+          <div class="form-row">
+            <div class="col-4"> <div class="form-group"> 
+              <label for="PrenotazioneTrattamento">Trattamento</label>
+              <select class="form-control" id="PrenotazioneTrattamento">
+                
+                <option value="FB">Pensione Completa</option>
+                <option value="HB">Mezza Pensione</option>
+                <option  value="BB">B&B</option>
+                <option value="SC">Vitto escluso</option>
+                
+              </select>
+            </div></div>
+            <div class="col-4"> <div class="form-group"> 
+              <label for="PrenotazioneCamera">Tipo Camera</label>
+              <select class="form-control" id="PrenotazioneCamera">
+                <option value="A">Camera 1 (La piu popolare!)</option>
+                <option value="P">Camera 2</option>
+                <option value="C">Camera 3</option>
+                <option value="D">Camera 4</option>
+                <option value="E">Camera 5</option>
+                <option value="F">Camera 6</option>
+                <option value="G">Camera 7</option>
+                <option value="H">Camera 8</option>
+                <option value="L">Camera 9</option>
+                <option value="P">Camera 10</option>
+                
+              </select>
+            </div></div>
+            <div class="col-4">
+              <div class="form-group">
+                <label for="PrenotazioneSpeciali">Richieste Speciali</label>
+                <select class="form-control" id="PrenotazioneSpeciali" multiple >
+                  <option>Accesso SPA</option>
+                  <option>Tour Organizzato</option>
+                  <option>Internet Super-Veloce</option>
+                  <option>Navetta Aeroporto</option>
+                </select>
+              </div>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="PrenotazioneTrattamento">Trattamento</label>
-            <select class="form-control" id="PrenotazioneTrattamento">
-              <option>BB</option>
-              <option>HB</option>
-              <option>SC</option>
-              <option>FB</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="PrenotazioneCamera">Tipo Camera</label>
-            <select class="form-control" id="PrenotazioneCamera">
-              <option>C</option>
-              <option>A</option>
-              <option>D</option>
-              <option>E</option>
-              <option>G</option>
-              <option>F</option>
-              <option>H</option>
-              <option>L</option>
-              <option>P</option>
-              <option>B</option>
-            </select>
-          </div>
+        
+          <div class="form-row">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
           
-          <button type="submit" class="btn btn-primary">Submit</button>
+          
         </form>
       </div>
       <div class="col-2">

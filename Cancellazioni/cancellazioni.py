@@ -7,7 +7,7 @@ from pandas.core.common import SettingWithCopyWarning
 warnings.simplefilter(action="ignore", category=SettingWithCopyWarning)
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
-# Un pò di import generici:
+# Un po di import generici:
 import pandas as pd
 import numpy as np
 

@@ -63,7 +63,7 @@ def predict(prenotazione):
 
     prenotazionedf = pd.DataFrame([data], columns=data.keys())
     
-    prenotazionedf.to_csv('c:/tmp/dataOggi.csv')
+
 
     prev= modello.predict(prenotazionedf)
     prob= modello.predict_proba(prenotazionedf)
