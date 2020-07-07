@@ -54,7 +54,7 @@ Questo nel mio esempio non c'è, purtroppo il set di dati è "Morto" ma nella vi
 # Come sporcarti le mani
 Il Progetto è liberamente scaricabile ed usabile
 ## Pre-Requisiti
-Per questo progetto ho utilizzato Pytho 3.7.7
+Per questo progetto ho utilizzato Python 3.7.7
 ```bash
 $ python --version
 Python 3.7.7
@@ -69,6 +69,7 @@ La parte di creazione del modello è disponibile in due formati
 
 ## Jupiter Notebook
 Un classico, è quello che vi consiglio di usare, contiene passo passo quello che è stato fatto.
+[AED Prenotazioni e previsione delle cancellazioni.ipynb](https://github.com/davidemaggi/ML-Hotel-Booking/blob/master/Cancellazioni/AED%20Prenotazioni%20e%20previsione%20delle%20cancellazioni.ipynb)
 
 ## Script Python
 Una volta che avete letto il notebook potrete usare lo script che contiene solo la parte di creazione e allenamento del modello(nella cartella Cancellazioni), ma non partite da qui, fate il viaggio con me nel Notebook
