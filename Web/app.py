@@ -5,27 +5,19 @@ from flask import (
 
 import connexion
 
-# Create the application instance
-#app = Flask(__name__, template_folder="templates")
-
-# Create the application instance
+#Creiamo un istanza Flask + Connexion
 app = connexion.App(__name__, specification_dir='./')
 
-# Read the swagger.yml file to configure the endpoints
+# Registriamo i dettagli dell'api in swagger
 app.add_api('swagger.yml')
 
 # Create a URL route in our application for "/"
 @app.route('/')
 def home():
-    """
-    This function just responds to the browser ULR
-    localhost:5000/
-
-    :return:        the rendered template 'home.html'
-    """
+   # Mostriamo l'homepage del potale
     return render_template('home.html')
 
-# If we're running in stand alone mode, run the application
+#Laciamo l'app per rispondere a chiamate da qualsiasi IP, sulla porta 5000
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
     
